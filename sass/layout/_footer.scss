@@ -1,9 +1,5 @@
 .footer {
     background: $rock;
-
-    &__wrapper {
-        margin-right: 70px;
-    }
 }
 
 .adress {
@@ -17,16 +13,12 @@
         font-size: 14px;
         line-height: 1.714;
         letter-spacing: 0.03em;
-        color: $white;    
+        color: $white;
 
-        &:not(:last-child) {
-            margin-bottom: 9px;
+        &:not(:first-child) {
+            padding-top: 9px;
         }
-
-        &:not(:last-child) {
-            margin-bottom: 9px;
-        }
-
+    
         &>[href^='mailto'] {
             text-decoration-line: underline;
         }
@@ -37,7 +29,7 @@
         line-height: 1.714;
         letter-spacing: 0.03em;
         color: $grey;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color $shift;
 
         &:hover,
         &:focus {
@@ -47,12 +39,13 @@
 }
 
 .footer-socials {
-    margin-right: 78px;
+    margin-top: 60px;
 
     &__title {
         font-weight: 700;
         font-size: 14px;
         line-height: 1.143;
+        letter-spacing: 0.03em;
         text-transform: uppercase;
         color: $white;
         padding-top: 12px;
@@ -63,10 +56,6 @@
         display: flex;
     }
 
-    &__item:not(:last-child) {
-        margin-right: 10px;
-    }
-
     &__link {
         display: flex;
         width: 44px;
@@ -75,8 +64,8 @@
         border-radius: 50%;
         align-items: center;
         justify-content: center;
-        
-        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        transition: background-color $shift;
 
         &:hover,
         &:focus {
@@ -84,29 +73,19 @@
         }
     }
 
-    &__icon {
-        color: $white;
+    &__item:not(:last-child) {
+        margin-right: 10px;
     }
 }
 
 .newsletter {
-    margin-right: auto;
+    margin-top: 60px;
+    width: 100%;
 
     &__form {
         display: flex;
-        align-items: flex-end;
-    }
-
-    &__label {
-
-        &:hover > input,
-        &:focus > input,
-        &:focus-within >input {
-            border: 1px solid $blue;
-            outline: none;
-            color: $white;
-            transition: $shift;
-        }
+        flex-direction: column;
+        align-items: center;
     }
 
     &__title {
@@ -120,37 +99,87 @@
     }
 
     &__input {
-            width: 358px;
-            height: 50px;
-            padding: 15px 16px;
+        height: 50px;
+        width: 450px;
+        padding: 15px 16px;
+        letter-spacing: 0.03em;
+        color: $white;
+        background-color: transparent;
             
-            background-color: transparent;
-            color: $white;
-            
-            border: 1px solid $blue;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-right: 12px;
+        border: 1px solid $blue;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        box-sizing: border-box;
+        outline: none;
 
-            &:placeholder-shown {
-                border: 1px solid rgba(255, 255, 255, 0.3);
-            }
+        &:placeholder-shown {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
     }
 
     &__btn {
+        margin-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    &__icon {
-        width: 24px;
-        height: 24px;
-        fill: $white;
-        margin-left: 24px;
-    }
-
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+    .footer {
+
+        & .container {
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        &-socials {
+            margin-top: 0;
+            align-self: flex-start;
+        }
+
+        &.newsletter {
+            flex-grow: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        display: flex;
+
+        & .container {
+            text-align: left;
+        }
+
+        &-socials {
+            margin-top: 0;
+        }
+    }
+
+    .newsletter {
+        width: auto;
+        margin-top: 0;
+
+        &__form {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        &__input {
+            width: 358px;
+            height: 50px;
+            margin-right: 12px;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+        }
+    }
+}
 

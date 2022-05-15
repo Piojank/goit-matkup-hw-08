@@ -36,6 +36,15 @@
         padding-bottom: 60px;
         text-align: center;
     }
+
+    .footer & {
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -81,6 +90,12 @@
         .clients & {
             padding-top: 94px;
             padding-bottom: 94px;
+        }
+
+        .footer & {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
         }
     }
 }
