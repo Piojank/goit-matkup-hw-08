@@ -55,6 +55,7 @@ img {
   padding: 0 15px;
   align-items: center;
   margin: 0 auto;
+  max-width: 768px;
 }
 
 .page-header .container {
@@ -75,7 +76,6 @@ img {
   flex-direction: column;
   padding-top: 60px;
   padding-bottom: 30px;
-  max-width: 768px;
 }
 
 .team .container {
@@ -90,17 +90,9 @@ img {
   text-align: center;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-    padding: 0 15px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
-    padding: 0 15px;
+    max-width: 1200px;
   }
   .page-header .container {
     min-height: 80px;
@@ -108,14 +100,12 @@ img {
   .article .container {
     padding-top: 60px;
     padding-bottom: 45px;
-    max-width: 1200px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    padding: 0 15px;
   }
   .service .container {
     padding: 200px 0;
@@ -136,7 +126,6 @@ img {
   .clients .container {
     padding-top: 94px;
     padding-bottom: 94px;
-    text-align: center;
   }
 }
 
@@ -164,13 +153,11 @@ img {
   display: flex;
   width: 20px;
   height: 20px;
-  color: #AFB1B8;
 }
 
 .clients__icon {
   width: 106px;
   height: 60px;
-  fill: currentColor;
   margin: 16px 32px;
 }
 
@@ -740,56 +727,42 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team__item__img {
+.team__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.team__img {
   width: 100%;
 }
 
-.team__person {
-  width: 270px;
-}
-
 .team__person--name {
-  text-align: center;
   margin-top: 30px;
-  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.188;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 
 .team__person--position {
-  text-align: center;
+  font-weight: 400;
   margin-top: 10px;
-  margin-bottom: 16px;
-  color: #757575;
   font-size: 16px;
   line-height: 1.188;
+  text-align: center;
   letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .team-socials__list {
   display: flex;
-  align-items: center;
+  text-align: center;
   margin-top: 16px;
   margin-bottom: 18px;
 }
 
 .team-socials__item {
-  display: flex;
-  margin-right: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-socials__item:hover, .team-socials__item:focus {
-  background: #2196f3;
-}
-
-.team-socials__item:hover .social-icon,
-.team-socials__item:focus .social-icon {
-  color: #ffffff;
-}
-
-.team-socials__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -797,6 +770,22 @@ img {
   align-items: center;
   justify-content: center;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #AFB1B8;
+}
+
+.team-socials__item:hover, .team-socials__item:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc(100%/2 - 15px);
+    margin-bottom: 30px;
+  }
+  .team__item:not(:last-child) {
+    margin-right: 15px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -810,17 +799,21 @@ img {
     max-width: 270px;
     margin-left: 0;
   }
+  .team__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .clients__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .clients__item {
+  flex-basis: calc(100% / 2 - 15px);
   width: 210px;
   box-sizing: border-box;
   height: 92px;
@@ -835,11 +828,10 @@ img {
   color: #2196f3;
 }
 
-.clients__item:not(:nth-child(-n+2)) {
-  margin-top: 15px;
-}
-
 @media screen and (max-width: 767px) {
+  .clients__item:not(:nth-child(-n+2)) {
+    margin-top: 15px;
+  }
   .clients__item:not(:nth-child(2n)) {
     margin-right: 15px;
   }
@@ -850,15 +842,27 @@ img {
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .clients__item {
-    flex-basis: calc(100%/3);
+    flex-basis: calc(100% / 3 - 15px);
+  }
+  .clients__item:not(:nth-child(-n+2)) {
+    margin-top: 15px;
+  }
+  .clients__item:not(:nth-child(n+4)) {
+    margin-top: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: nowrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .clients__item {
+    margin-top: 0px;
+  }
+  .clients__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 

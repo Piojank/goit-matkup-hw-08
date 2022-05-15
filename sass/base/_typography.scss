@@ -3,6 +3,7 @@
     padding: 0 15px;
     align-items: center;
     margin: 0 auto;
+    max-width: 768px;
 
     .page-header & {
         display: flex;
@@ -22,8 +23,6 @@
         flex-direction: column;
         padding-top: 60px;
         padding-bottom: 30px;
-        max-width: 768px;
-
     }
 
     .team & {
@@ -37,38 +36,28 @@
         padding-bottom: 60px;
         text-align: center;
     }
-
-}
-
-@media screen and (min-width: 480px) {
-    .container {
-        max-width: 480px;
-        padding: 0 15px;
-    }
 }
 
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 768px;
-        padding: 0 15px;
+        max-width: 1200px;
 
         .page-header & {
-                min-height: 80px;
-            }
+            min-height: 80px;
+        }
 
         .article & {
-                padding-top: 60px;
-                padding-bottom: 45px;
-                max-width: 1200px;
-            }
+            padding-top: 60px;
+            padding-bottom: 45px;
+        }
+
     }
 }
 
 @media screen and (min-width: 1200px) {
     .container {
         max-width: 1200px;
-        padding: 0 15px;
-
+        
         .service & {
             padding: 200px 0;
             height: auto;
@@ -92,7 +81,6 @@
         .clients & {
             padding-top: 94px;
             padding-bottom: 94px;
-            text-align: center;
         }
     }
 }

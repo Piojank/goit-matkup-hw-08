@@ -2,14 +2,14 @@
 
     &__list {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin-top: 30px;
         flex-wrap: wrap;
     }
 
     &__item {
-
+        flex-basis: calc(100% / 2 - 15px);
         width: 210px;
         box-sizing: border-box;
         height: 92px;
@@ -24,9 +24,7 @@
             color: $blue;
         }
 
-        &:not(:nth-child(-n+2)) {
-            margin-top: 15px;
-        }
+
     }
 }
 
@@ -34,6 +32,10 @@
 
     .clients {
         &__item{
+            &:not(:nth-child(-n+2)) {
+                margin-top: 15px;
+            }
+
             &:not(:nth-child(2n)) {
                 margin-right: 15px;
             }
@@ -49,20 +51,35 @@
 
     .clients {
         &__item {
-            flex-basis: calc(100%/3);
+            flex-basis: calc(100% / 3 - 15px);
+
+            &:not(:nth-child(-n+2)) {
+                margin-top: 15px;
+            }
+
+            &:not(:nth-child(n+4)) {
+                margin-top: 15px;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1200px) {
     
-.clients {
+    .clients {
 
-    &__list {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        &__list {
+            flex-wrap: nowrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        &__item {
+            margin-top: 0px;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
         }
     }
-
 }
