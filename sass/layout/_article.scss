@@ -1,0 +1,136 @@
+.article {
+
+    padding-bottom: 0;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    &__item {
+        &:first-of-type {
+                margin: 0 0 15px;
+            }
+        
+            &:nth-child(2) {
+                margin: 15px 0;
+            }
+        
+            &:nth-child(3) {
+                margin: 15px 0;
+            }
+        
+            &:last-of-type {
+                margin: 0 15px 0;
+            }
+    }
+
+    &__icon {
+        height: 70px;
+        width: 70px;
+        margin: 25px 100px;
+        
+        &-wrapper {
+            text-align: center;
+            background: $ghost;
+            border-radius: 4px;
+            height: 120px;
+            
+            
+            margin-bottom: 30px;
+            }
+    }
+
+    &__title {
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.143;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: $silver;
+        margin: 10px 0 0;
+        line-height: 1.714;
+        letter-spacing: 0.03em;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .article {
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            flex-basis: calc(100% / 2 - 15px);
+            &:first-of-type {
+                    margin: 0 15px 15px 0;
+                }
+            
+                &:nth-child(2) {
+                    margin: 0 0 15px 15px;
+                }
+            
+                &:nth-child(3) {
+                    margin: 15px 15px 0 0;
+                }
+            
+                &:last-of-type {
+                    margin: 15px 0 0 15px;
+                }
+        }
+
+        &__title {
+            display: flex;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .article {
+
+        &__icon-wrapper {
+            display: flex;   
+        }
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        &__item {
+            flex-basis: calc(100%/4);
+        
+            &:first-of-type {
+                margin-right: 15px;
+            }
+        
+            &:nth-child(2) {
+                margin: 0 15px;
+            }
+        
+            &:nth-child(3) {
+                margin: 0 15px;
+            }
+        
+            &:last-of-type {
+                margin-left: 15px;
+            }
+        }
+
+        &__title {
+         display: flex;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.container {
+    width: 100%;
+    padding: 0 15px;
+    align-items: center;
+    margin: 0 auto;
+
+    .page-header & {
+        display: flex;
+        justify-content: space-between;
+        min-height: 60px;
+    }
+
+    .service & {
+        padding: 118px 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .article & {
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        max-width: 768px;
+
+    }
+
+    .team & {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+    .clients & {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 480px) {
+    .container {
+        max-width: 480px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 15px;
+
+        .page-header & {
+                min-height: 80px;
+            }
+
+        .article & {
+                padding-top: 60px;
+                padding-bottom: 45px;
+                max-width: 1200px;
+            }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 15px;
+
+        .service & {
+            padding: 200px 0;
+            height: auto;
+        }
+
+        .article & {
+            padding-top: 94px;
+            padding-bottom: 47px;
+        }
+            
+        .about & {
+            padding-top: 47px;
+            padding-bottom: 94px;
+        }
+
+        .team & {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
+
+        .clients & {
+            padding-top: 94px;
+            padding-bottom: 94px;
+            text-align: center;
+        }
+    }
+}

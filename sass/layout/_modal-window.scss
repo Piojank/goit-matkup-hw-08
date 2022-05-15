@@ -1,0 +1,160 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: $white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    opacity: 1;
+    
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__btn--submit {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.form {
+
+    &__header {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        position: relative;
+
+        &:focus-within {
+            color: $blue;
+        }
+
+        &:focus-within > svg,
+        &:hover > svg {
+            fill: $blue;
+        }
+    }
+
+    &__span {
+        letter-spacing: 0.01em;
+        color: $silver;
+        font-size: 12px;
+        line-height: 1.166;
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        height: 40px;
+        padding: 11px 12px;
+        padding-left: 42px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus-within,
+        &:focus {
+            outline: none;
+            border: 1px solid $blue;
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+    }
+
+    &__textarea {
+        resize: none;
+        padding: 12px 16px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 20px;
+
+        &::placehoder {
+            font-size: 12px;
+            line-height: 1.166;
+            letter-spacing: 0.01em;
+            color: $boulder;
+        }
+
+        &:hover,
+        &:focus-within,
+        &:focus {
+            outline: none;
+            border: 1px solid $blue;
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+        
+    }
+}
+
+.policy {
+
+    &__input {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--checkbox {
+            width: 16px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border: 1px solid $eerie;
+            border-radius: 2px;
+            appearance: none;
+            cursor: pointer;
+
+            &:checked {
+                background-image: url(../images/icon-checked.svg);
+                background-color: $blue;
+                border-color: $blue;
+            }
+        }
+    }
+
+    &__text {
+        color: $silver;
+    }
+
+    &__link {
+    color: $blue;
+    text-decoration: underline;
+    text-transform: capitalize;
+    }
+}

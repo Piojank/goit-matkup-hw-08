@@ -1,0 +1,50 @@
+.about {
+
+    display: none;
+
+    & .container {
+        width: 1200px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        padding-top: 50px;
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        background: rgba(47, 48, 58, 0.8);
+        color: $white;
+        height: 70px;
+        padding: 27px 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about {
+        display: flex;
+    }
+}
