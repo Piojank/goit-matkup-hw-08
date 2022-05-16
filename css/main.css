@@ -104,12 +104,6 @@ img {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1200px) {
   .container {
     max-width: 768px;
@@ -321,6 +315,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 48px 40px;
   background-color: #ffffff;
   transition-property: opacity, visibility;
   transition-duration: 300ms;
@@ -457,8 +452,6 @@ img {
 }
 
 .menu-list {
-  margin-top: 48px;
-  margin-left: 40px;
   margin-bottom: 200px;
 }
 
@@ -484,7 +477,6 @@ img {
   display: inline-block;
   font-size: 24px;
   line-height: 1.172;
-  margin-left: 40px;
 }
 
 .contacts__link--accent {
@@ -495,8 +487,9 @@ img {
 
 .mobile-socials {
   display: flex;
-  justify-content: space-evenly;
-  margin: 0 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 0;
 }
 
 .mobile-socials__item {
@@ -1011,7 +1004,7 @@ img {
 
 .newsletter {
   margin-top: 60px;
-  width: 100%;
+  width: auto;
 }
 
 .newsletter__form {
@@ -1032,12 +1025,14 @@ img {
 
 .newsletter__input {
   height: 50px;
-  width: 450px;
+  width: 94vw;
+  max-width: 450px;
   padding: 15px 16px;
   letter-spacing: 0.03em;
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #2196f3;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   box-sizing: border-box;

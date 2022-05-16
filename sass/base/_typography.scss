@@ -2,6 +2,7 @@
     padding: 0 15px;
     align-items: center;
     margin: 0 auto;
+   
 
     .page-header & {
         display: flex;
@@ -51,12 +52,6 @@
         padding-bottom: 60px;
     }
     
-}
-
-@media screen and (min-width: 480px) {
-    .container {
-            max-width: 480px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {

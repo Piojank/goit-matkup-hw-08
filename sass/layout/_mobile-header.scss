@@ -5,8 +5,6 @@
 .menu {
 
     &-list {
-        margin-top: 48px;
-        margin-left: 40px;
         margin-bottom: 200px;
     }
     
@@ -36,7 +34,6 @@
         display: inline-block;
         font-size: 24px;
         line-height: 1.172;
-        margin-left: 40px;
 
         &--accent {
             color: $blue;
@@ -48,8 +45,9 @@
 
 .mobile-socials {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 0;
 
 
     &__item {
