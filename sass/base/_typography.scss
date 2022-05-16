@@ -12,6 +12,7 @@
 
     .service & {
         padding: 118px 0;
+        height: 400px;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
@@ -60,6 +61,11 @@
 
         .page-header & {
             min-height: 80px;
+        }
+
+        .service & {
+            padding: 118px 0;
+            height: 400;
         }
 
         .article & {
