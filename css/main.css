@@ -493,7 +493,6 @@ img {
 
 .mobile-socials {
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   margin: 0 0;
 }
@@ -508,6 +507,10 @@ img {
 .mobile-socials__item:not(:first-child) {
   border-left: 1px solid rgba(33, 33, 33, 0.2);
   padding-left: 10px;
+}
+
+.mobile-socials__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .mobile-contacts {
