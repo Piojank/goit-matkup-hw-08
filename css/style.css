@@ -714,9 +714,7 @@ button[type="submit"] {
 .portfolio__caption {
     display: block;
     box-sizing: border-box;
-    border-left: 1px solid var(--shade);
-    border-bottom: 1px solid var(--shade);
-    border-right: 1px solid var(--shade);
+
     padding: 20px 24px;
 }
 

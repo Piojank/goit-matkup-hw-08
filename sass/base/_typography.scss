@@ -41,10 +41,18 @@
         display: flex;
         flex-direction: column;
         padding-top: 60px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
         justify-content: center;
         text-align: center;
     }
+
+    .portfolio & {
+        width: auto;
+        margin: 0 auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -60,6 +68,9 @@
             padding-bottom: 45px;
         }
 
+        .nav & {
+            padding-bottom: 30px;
+        }
     }
 }
 
@@ -96,6 +107,11 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+        }
+
+        .portfolio & {
+            padding-top: 94px;
+            padding-bottom: 94px;
         }
     }
 }
