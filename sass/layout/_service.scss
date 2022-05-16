@@ -49,6 +49,10 @@
             $service),
             url("../images/main/background_tablet768x400.jpg");
         background-size: cover;
+
+        &__title {
+            max-width: 365px;
+        }
     }
 
 @media (min-device-pixel-ratio: 2),
@@ -88,6 +92,10 @@
                 $service),
                 url("../images/main/background3200x1200.jpg");
             background-size: cover;
+
+            &__title {
+                max-width: 365px;
+            }
         }
     }
 }
