@@ -190,7 +190,8 @@ img {
 .clients__icon {
   width: 106px;
   height: 60px;
-  margin: 16px 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .footer-socials__icon {
@@ -525,7 +526,6 @@ img {
   font-weight: 900;
   font-size: 26px;
   line-height: 1.616;
-  width: 365px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -881,7 +881,6 @@ img {
 
 .clients__item {
   flex-basis: calc(100% / 2 - 15px);
-  box-sizing: border-box;
   border: 1px solid #757575;
   border-radius: 4px;
   color: #AFB1B8;

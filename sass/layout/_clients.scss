@@ -10,7 +10,6 @@
 
     &__item {
         flex-basis: calc(100% / 2 - 15px);
-        box-sizing: border-box;
         border: 1px solid $silver;
         border-radius: 4px;
         color: $bombay;
@@ -25,6 +24,12 @@
 
     }
 }
+
+// @media screen and (max-width: 767px) {
+//     .clients__item:not(:nth-child(2n)) {
+//         margin-right: 15px;
+//     }
+// }
 
 @media screen and (max-width: 767px) {
 
