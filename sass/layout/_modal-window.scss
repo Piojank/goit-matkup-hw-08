@@ -165,10 +165,10 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .modal {
-        width: 528px;
+        max-width: 100%;
     }
 
     .policy__text {

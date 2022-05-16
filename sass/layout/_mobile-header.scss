@@ -5,7 +5,9 @@
 .menu {
 
     &-list {
-        margin-bottom: 302px;
+        margin-top: 48px;
+        margin-left: 40px;
+        margin-bottom: 200px;
     }
     
     &__link {
@@ -29,12 +31,12 @@
 }
 
 .contacts {
-    display: none;
-
+    
     &__link {
         display: inline-block;
         font-size: 24px;
         line-height: 1.172;
+        margin-left: 40px;
 
         &--accent {
             color: $blue;
@@ -46,27 +48,26 @@
 
 .mobile-socials {
     display: flex;
-    align-items: flex-start;
-    
+    justify-content: space-evenly;
+    margin: 0 40px;
 
-    &__item{
+
+    &__item {
         font-size: 18px;
         color: $blue;
         line-height: 1.22;
         letter-spacing: 0.02em;
     }
 
-    &__item:not(:first-child) {
-        border-left: 1px solid rgba(33, 33, 33, 0.2);
-        padding-left: 10px;
-    }
-
-    &__item:not(:last-child) {
-        padding-right: 10px;
-    }
+        &__item:not(:first-child) {
+            border-left: 1px solid rgba(33, 33, 33, 0.2);
+            ;
+            padding-left: 10px;
+}
 }
 
 .mobile-contacts {
     text-align: left;
     margin-bottom: 64px;
 }
+
